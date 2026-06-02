@@ -128,7 +128,7 @@
             });
 			
 			
-            new Chart(document.getElementById("otro"), {
+           const mixedChart = new Chart(document.getElementById("otro"), {
                   data: {
         datasets: [{
             type: 'scatter',
@@ -229,8 +229,7 @@
                                 { name: "INGENIERIA EN DISEÑO EN LA UNIVERSIDAD ADOLFO IBAÑEZ", x: 6, y: 9754692 },
                                 { name: "INGENIERIA EN FABRICACION Y DISEÑO INDUSTRIAL EN LA UNIVERSIDAD TÉCNICA FEDERICO SANTA MARIA", x: 6, y: 5180000 },
                                 { name: "INGENIERIA EN REALIDAD VIRTUAL Y DISEÑO DE JUEGOS DIGITALES EN LA UNIVERSIDAD BERNARDO O'HIGGINS", x: 5, y: 5900000 },
-                            ],
-        }],
+                            ],,
         labels: ['January', 'February', 'March', 'April']
     },
                             ],
