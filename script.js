@@ -3,7 +3,7 @@
                 data: {
                     datasets: [
                         {
-                            label: "Scatter Dataset",
+                            label: "Arancel",
                             data: [
                                 { name: "BACHILLERATO EN ARTES, ARQUITECTURA Y DISEÑO EN LA UNIVERSIDAD FINIS TERRAE", x: 5, y: 7200000 },
                                 { name: "BACHILLERATO EN DISEÑO EN LA UNIVERSIDAD DEL DESARROLLO", x: 6, y: 10364360 },
@@ -193,7 +193,7 @@
                                 { x: 3, y: 400000 },
                                 { x: 7, y: 0 },
                             ],
-                            borderColor: "rgba(119, 28, 53, 0.2)",
+                            borderColor: "rgba(255, 0, 157, 0.3)",
                             borderWidth: 1,
                             pointRadius: 0,
                             pointHoverRadius: 0,
@@ -260,7 +260,7 @@
                                 { x: 3, y: 0 },
                                 { x: 7, y: 210000 },
                             ],
-                            borderColor: "rgba(107, 28, 119, 0.2)",
+                            borderColor: "rgba(88, 0, 255, 0.3)",
                             borderWidth: 1,
                             pointRadius: 0,
                             pointHoverRadius: 0,
@@ -307,12 +307,15 @@
                             titleFont: { family: "'Georama', sans-serif", size: 12, weight: "600" },
                             bodyFont: { family: "'Georama', sans-serif", size: 11 },
                             padding: 10,
+							mode: 'index',
                             filter: function (item) {
                                 return item.datasetIndex === 0;
                             },
                             callbacks: {
+								
                                 label: function (context) {
                                     const point = context.raw;
+
                                     return [
                                         point.name,
                                         "Universidad acreditada por " + point.x + " años",
