@@ -307,10 +307,9 @@
                             titleFont: { family: "'Georama', sans-serif", size: 12, weight: "600" },
                             bodyFont: { family: "'Georama', sans-serif", size: 11 },
                             padding: 10,
-							mode: 'index',
-                            filter: function (item) {
-                                return item.datasetIndex === 0;
-                            },
+							mode: 'point',
+							intersect: true,
+
                             callbacks: {
 								
                                 label: function (context) {
@@ -319,7 +318,7 @@
                                     return [
                                         point.name,
                                         "Universidad acreditada por " + point.x + " años",
-                                        "Costo de Titulación / Certificado $ " + point.y.toLocaleString("es-CL"),
+                                        context.dataset.label + " $ " + point.y.toLocaleString("es-CL"),
 										
 										
                                     ];
